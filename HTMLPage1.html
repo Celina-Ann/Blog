@@ -1,0 +1,17 @@
+﻿{% extends 'base.html.twig' %}
+
+{% block body %}
+<h1>Blog</h1>
+
+<ul>
+    {% for post in posts %}
+    <li>
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.content }}</p>
+        <p>Published on: {{ post.publishedDate|date('Y-m-d H:i:s') }}</p>
+    </li>
+    {% endfor %}
+</ul>
+
+<a href="{{ path('new_post') }}">Create a new post</a>
+{% endblock %}

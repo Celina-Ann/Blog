@@ -1,0 +1,12 @@
+﻿{% extends 'base.html.twig' %}
+
+{% block body %}
+<h1>New Post</h1>
+
+{{ form_start(form) }}
+{{ form_widget(form) }}
+<button type="submit">Create Post</button>
+{{ form_end(form) }}
+
+<a href="{{ path('blog') }}">Back to the blog</a>
+{% endblock %}
